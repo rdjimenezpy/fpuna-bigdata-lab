@@ -7,8 +7,8 @@ Ubícate en la raíz del repositorio local.
 En **WSL / Linux**:
 
 ```bash
-export REPO_HOME=/opt/repo/fpuna-bigdata-lab
-cd ${REPO_HOME}
+export REPO_ROOT=/opt/repo/fpuna-bigdata-lab
+cd ${REPO_ROOT}
 ```
 
 ---
@@ -258,7 +258,7 @@ git remote add origin git@github.com:TU_USUARIO/fpuna-bigdata-lab.git
 # Flujo completo resumido
 
 ```bash
-cd ${REPO_HOME}/fpuna-bigdata-lab
+cd ${REPO_ROOT}/fpuna-bigdata-lab
 git init
 git config --global user.name "Prof. Richard D. Jiménez-R."
 git config --global user.email "rjimenez@pol.una.py"

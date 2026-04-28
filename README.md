@@ -9,28 +9,29 @@
     Asignatura: <strong>Electiva - Big Data</strong>
   </p>
 </div>
+
 ---
 
 ## IDENTIFICACIÓN ACADÉMICA
 
-| Identificación de la Asignatura | Especificación Institucional                                                  |
-| ------------- | ----------------------------------------------------------------------------- |
-| Institución   | Universidad Nacional de Asunción (UNA)                                        |
-| Unidad Académica | Facultad Politécnica (FP-UNA)                                                 |
-| Dependencia Académica | Departamento de Enseñanza de Informática (DEI)                                |
-| Asignatura    | Electiva - Big Data                                                           |
-| Carreras      | Ingeniería en Informática (IIN) / Licenciatura en Ciencias Informáticas (LCIk) |
-| Plan de Estudios | Plan 2008                                             |
-| Periodo académico | Primer Periodo 2026                                                           |
-| Modalidad de Enseñanza | Presencial con apoyo de aula virtual EDUCA y herramientas colaborativas       |
-| Carga Horaria Total | 112 horas totales (7 horas semanales: 3 teóricas y 4 prácticas)               |
-| Turno / Sección | T / TQ                                                                        |
-| Docente Encargado | Prof. Ing. Richard Daniel Jiménez Riveros                                     |
-| Contacto Institucional | rjimenez@pol.una.py                                                           |
-| Sede de Referencia | Campus Universitario, San Lorenzo - Paraguay                                  |
-| Entorno de Laboratorio | Virtualización basada en WSL2 / Ubuntu Linux                                  |
-| Estructura de Trabajo | `/opt/repo/fpuna-bigdata-lab` (Directorio de referencia local)                |
-| IDE de Referencia | JetBrains PyCharm (Entorno de desarrollo recomendado)                         |
+| Identificación de la Asignatura | Especificación Institucional                                                   |
+|---------------------------------|--------------------------------------------------------------------------------|
+| Institución                     | Universidad Nacional de Asunción (UNA)                                         |
+| Unidad Académica                | Facultad Politécnica (FP-UNA)                                                  |
+| Dependencia Académica           | Departamento de Enseñanza de Informática (DEI)                                 |
+| Asignatura                      | Electiva - Big Data                                                            |
+| Carreras                        | Ingeniería en Informática (IIN) / Licenciatura en Ciencias Informáticas (LCIk) |
+| Plan de Estudios                | Plan 2008                                                                      |
+| Periodo académico               | Primer Periodo 2026                                                            |
+| Modalidad de Enseñanza          | Presencial con apoyo de aula virtual EDUCA y herramientas colaborativas        |
+| Carga Horaria Total             | 112 horas totales (7 horas semanales: 3 teóricas y 4 prácticas)                |
+| Turno / Sección                 | T / TQ                                                                         |
+| Docente Encargado               | Prof. Ing. Richard Daniel Jiménez Riveros                                      |
+| Contacto Institucional          | rjimenez@pol.una.py                                                            |
+| Sede Central                    | Campus de la UNA, San Lorenzo, Paraguay                                        |
+| Entorno de Laboratorio          | Virtualización basada en WSL2 / Ubuntu Linux                                   |
+| Estructura de Trabajo           | `/opt/repo/fpuna-bigdata-lab` (Directorio de referencia local)                 |
+| IDE de Referencia               | JetBrains PyCharm (Entorno de desarrollo recomendado)                          |
 
 ---
 
@@ -379,7 +380,7 @@ Directorio destinado al almacenamiento y organización de los datos utilizados e
 * **`data/raw/`**
   Contiene los datos originales o de origen, tal como fueron obtenidos desde archivos fuente, APIs, bases de datos u otros sistemas externos. Deben preservarse sin transformaciones.
 
-* **`data/staging/`**
+* **`data/staged/`**
   Espacio intermedio para datos en proceso de limpieza, normalización, tipificación, enriquecimiento o preparación técnica.
 
 * **`data/duckdb/`**
@@ -494,13 +495,13 @@ Editar `.env` con los parámetros reales del laboratorio, manteniendo la misma e
 ```bash
 export REPO_ENV=lab
 export PROJECT_NAME=fpuna-bigdata-lab
-export REPO_HOME=/opt/repo/${PROJECT_NAME}
+export REPO_ROOT=/opt/repo/${PROJECT_NAME}
 export POSTGRES_HOST=localhost
 export POSTGRES_PORT=5432
 export POSTGRES_DBNAME=bigdata_lab
 export POSTGRES_USER=postgres
 export POSTGRES_PASSWORD=postgres
-export POSTGRES_DBINIT=${REPO_HOME}/database/postgresql/ddl/db_init.sql
+export POSTGRES_DBINIT=${REPO_ROOT}/database/postgresql/ddl/db_init.sql
 export DUCKDB_PATH=./data/duckdb/bigdata_lab.duckdb
 export AIRFLOW_HOME=/opt/airflow/airflow_3.1.8
 export PENTAHO_HOME=/opt/pentaho/data-integration

@@ -45,7 +45,6 @@ En esta guía, **DuckDB** se instala y configura como **motor analítico embebid
 La versión original del borrador mezclaba conceptos correctos con otros que conviene separar mejor. El principal ajuste de esta versión es metodológico:
 
 - este documento queda enfocado en **DuckDB**;
-- la integración con **MotherDuck** se deja para un tutorial específico posterior;
 - y la ruta recomendada para el curso es instalar **dos componentes complementarios**:
   - el **CLI oficial** de DuckDB para trabajo interactivo;
   - y el **paquete Python `duckdb`** dentro de un entorno virtual para scripts, notebooks y automatización.
@@ -177,7 +176,7 @@ Tienes dos modos comunes:
 Ejemplo de archivo persistente:
 
 ```bash
-duckdb /opt/repo/fpuna-bigdata-lab/data/local/duckdb/lab.duckdb
+duckdb /opt/repo/fpuna-bigdata-lab/data/duckdb/lab.duckdb
 ```
 
 ### 4.3 DuckDB está optimizado para análisis
@@ -206,6 +205,8 @@ Antes de instalar DuckDB, verifica que ya dispones de:
 - Conectividad a Internet.
 - Usuario Linux con acceso a `curl`.
 - Conocimientos básicos de terminal Bash.
+
+> El comando `curl` es una herramienta de línea de comandos que sirve para transferir datos hacia o desde un servidor usando URLs, soportando múltiples protocolos como HTTP, HTTPS, FTP, SFTP, entre otros.
 
 ### Verificaciones rápidas
 
@@ -403,7 +404,7 @@ Se debe imprimir la versión del paquete Python instalado.
 Crea y abre una base de datos persistente:
 
 ```bash
-duckdb /opt/repo/fpuna-bigdata-lab/data/duckdb/bigdata-lab.duckdb
+duckdb /opt/repo/fpuna-bigdata-lab/data/duckdb/lab.duckdb
 ```
 
 Cuando el CLI se abra, ejecuta:
